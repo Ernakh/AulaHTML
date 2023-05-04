@@ -1,0 +1,17 @@
+<html>
+<body>
+<select onchange="minhaFuncao(this)">
+  <option value="blue">Azul</option>
+  <option value="red">Vermelho</option>
+  <option value="green">Verde</option>
+  <option value="yellow">Amarelo</option>
+</select>
+<script>
+function minhaFuncao(elemento) 
+{
+	document.body.style.backgroundColor = elemento.value;
+}
+</script>
+
+</body>
+</html>

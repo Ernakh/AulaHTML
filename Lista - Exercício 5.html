@@ -1,0 +1,56 @@
+<html>
+<body>
+<script>
+	function marcarCheck(elemento) 
+	{  
+		var boxes = document.getElementsByName("animal");
+
+		for (i = 0; i < boxes.length; i++) 
+		{
+			if(elemento.checked == true)
+			{
+				boxes[i].checked = true;
+			}
+			else
+			{
+				boxes[i].checked = false;
+			}
+		}
+		
+		TestaBtnAprovar();
+	}
+
+	function TestaBtnAprovar()
+	{
+		var boxes = document.getElementsByName("animal");
+		
+		var contagem = 0;
+		
+		for (i = 0; i < boxes.length; i++) 
+		{
+			if(boxes[i].checked == true)
+			{
+				contagem++;
+			}				
+		}
+		
+		if(contagem >= 2)
+		{
+			document.getElementById("btnAprovar").removeAttribute("disabled");
+		}
+		else
+		{
+			document.getElementById("btnAprovar").setAttribute("disabled", "disabled");
+		}
+	}
+</script>
+
+<legend>Qual seu animal favorito?</legend>
+<input id="todos" type="checkbox" onclick="marcarCheck(this)" name="xxx" value="all" /><strong>TODOS</strong><br />
+<input type="checkbox" name="animal" onclick="TestaBtnAprovar()" value="Cat" />Gato<br />
+<input type="checkbox" name="animal" onclick="TestaBtnAprovar()" value="Dog" />Cão<br />
+<input type="checkbox" name="animal" onclick="TestaBtnAprovar()" value="Bird" />Pássaro<br />
+<button id="btnAprovar" disabled>Salvar</button>
+
+</body>
+</html>

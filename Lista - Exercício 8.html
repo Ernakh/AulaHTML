@@ -1,0 +1,56 @@
+<html>
+<body>
+<script>
+
+var tam = 16;
+
+function ft(cor) 
+{
+	document.getElementById('paragrafo').style.color = cor; 
+}
+
+function bg(cor) 
+{
+	document.getElementById('paragrafo').style.backgroundColor = cor; 
+}
+
+function fontMais()
+{
+	tam++;
+	document.getElementById("paragrafo").style.fontSize = tam + 'px';
+}
+
+function fontMenos()
+{
+	tam--;
+	document.getElementById("paragrafo").style.fontSize = tam + 'px';
+}
+
+function UpperText()
+{
+	var x = document.getElementById("paragrafo");
+    x.innerText = x.innerText.toUpperCase();
+}
+
+function LowerText()
+{
+	document.getElementById("paragrafo").innerText = document.getElementById("paragrafo").innerText.toLowerCase();
+}
+
+</script>
+
+<button onclick="ft('black')">Fonte Preta</button>
+<button onclick="ft('white')">Fonte Branca</button>
+<button onclick="bg('black')">Fundo Preto</button>
+<button onclick="bg('white')">Fundo Branco</button>
+<button onclick="fontMais()">+</button>
+<button onclick="fontMenos()">-</button>
+<button onclick="UpperText()">Maiúscula</button>
+<button onclick="LowerText()">Minúscula</button>
+<br/>
+<p id="paragrafo">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam volutpat ipsum ac consectetur tincidunt. Mauris tincidunt pharetra massa, at posuere nibh ullamcorper sed. Phasellus quam nisi, volutpat vitae odio ac, placerat maximus leo. Nam mollis mattis dui, eget commodo magna pulvinar sed. Nam interdum massa turpis, vitae volutpat velit sagittis sit amet. Maecenas in efficitur leo. Etiam mauris lectus, tincidunt ut blandit id, accumsan quis eros. Maecenas lacinia purus libero, eu dignissim ex pulvinar vel. Aliquam varius tempor leo, eget viverra magna mollis eget. Aenean sed magna auctor, malesuada lorem in, egestas velit. Quisque eget odio ipsum.
+</p>
+
+</body>
+</html>
